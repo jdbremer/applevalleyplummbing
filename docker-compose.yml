@@ -1,0 +1,25 @@
+services:
+  web:
+    build: .
+    image: apple-valley-plumbing:latest
+    container_name: apple-valley-plumbing
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      # Optional SMTP config for the contact form — uncomment and set to enable email delivery.
+      # SMTP_HOST: smtp.example.com
+      # SMTP_PORT: "587"
+      # SMTP_USER: user@example.com
+      # SMTP_PASS: changeme
+      # SMTP_FROM: "Apple Valley Plumbing <noreply@theapplevalleyplumber.com>"
+      # CONTACT_TO: service@theapplevalleyplumber.com
+    ports:
+      # Change the LEFT side to whatever host port you want Nginx to proxy to.
+      - "${APP_PORT:-3030}:3000"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
