@@ -33,7 +33,7 @@ export default function HomePage() {
           </div>
           <div className="lg:col-span-7">
             <p className="eyebrow bg-brand-800 text-brand-100 ring-brand-700">Meet the owner</p>
-            <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">
               Hi, I&apos;m {business.owner}. I started this company to do plumbing the right way.
             </h2>
             <p className="mt-4 text-brand-100">

@@ -20,7 +20,7 @@ export default function CTABanner({
               <p className="text-xs uppercase tracking-[0.18em] text-brand-200">
                 Apple Valley · Eagan · Lakeville · Burnsville · Rosemount · Farmington
               </p>
-              <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">{title}</h2>
+              <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">{title}</h2>
               <p className="mt-3 max-w-xl text-brand-100">{body}</p>
             </div>
             <div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end">
