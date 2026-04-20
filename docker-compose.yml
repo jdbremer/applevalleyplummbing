@@ -7,6 +7,8 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
+      UMAMI_SERVER_URL: ${UMAMI_SERVER_URL:-}
+      UMAMI_WEBSITE_ID: ${UMAMI_WEBSITE_ID:-}
       # Optional SMTP config for the contact form — uncomment and set to enable email delivery.
       # SMTP_HOST: smtp.example.com
       # SMTP_PORT: "587"

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { business, serviceCities, citySlug } from "@/lib/business";
 import { services } from "@/lib/services";
+import { posts } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = business.siteUrl.replace(/\/$/, "");
@@ -39,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...serviceEntries, ...cityEntries];
+  const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: `${base}/news/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "yearly",
+    priority: 0.5,
+  }));
+
+  return [...staticEntries, ...serviceEntries, ...cityEntries, ...postEntries];
 }

@@ -15,6 +15,7 @@ const mainNav = [
   { href: "/why-choose-us", label: "Why Us" },
   { href: "/reviews", label: "Reviews" },
   { href: "/coupons", label: "Coupons" },
+  { href: "/news", label: "News" },
 ];
 
 export default function Header() {
@@ -22,6 +23,7 @@ export default function Header() {
   const [drop, setDrop] = useState(false);
 
   return (
+    <>
     <header className="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md ring-1 ring-slate-100">
       <div className="hidden bg-brand-800 text-white text-xs md:block">
         <div className="container-page flex items-center justify-between py-2">
@@ -119,8 +121,10 @@ export default function Header() {
         </button>
       </div>
 
-      {open && (
-        <div className="fixed inset-0 z-50 lg:hidden">
+    </header>
+
+    {open && (
+        <div className="fixed inset-0 z-[60] lg:hidden">
           <div className="absolute inset-0 bg-brand-900/40" onClick={() => setOpen(false)} />
           <div className="absolute right-0 top-0 h-full w-80 max-w-[90%] overflow-y-auto bg-white p-6 shadow-soft">
             <div className="mb-6 flex items-center justify-between">
@@ -178,6 +182,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
