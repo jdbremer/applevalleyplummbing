@@ -6,6 +6,8 @@ import TrustStrip from "@/components/TrustStrip";
 import ServicesGrid from "@/components/ServicesGrid";
 import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
+import CouponsTeaser from "@/components/CouponsTeaser";
+import HomeContactSection from "@/components/HomeContactSection";
 import { business, serviceCities, citySlug } from "@/lib/business";
 
 export default function HomePage() {
@@ -110,6 +112,8 @@ export default function HomePage() {
       </section>
 
       <Testimonials />
+      <CouponsTeaser />
+      <HomeContactSection />
       <CTABanner />
     </>
   );

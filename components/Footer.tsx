@@ -118,6 +118,9 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-white">
               Contact
             </Link>
+            <Link href="/feedback" className="hover:text-white">
+              Leave a Review
+            </Link>
             <Link href="/news" className="hover:text-white">
               News
             </Link>

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/coupons",
     "/news",
     "/contact",
+    "/feedback",
   ];
 
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
